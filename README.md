@@ -1,6 +1,6 @@
 <!-- ═══════════════ HEADER ═══════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A0000,50:B00020,100:FF1744&height=300&section=header&text=Fahad%20Al%20Fahim&fontSize=72&fontColor=FFFFFF&animation=twinkling&fontAlignY=40&desc=President%20%40%20PUCSC%20%7C%20Cyber%20Security%20Enthusiast&descSize=22&descColor=FFD6D6&descAlignY=62" width="100%" alt="header" />
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,24,30&height=300&section=header&text=Fahad%20Al%20Fahim&fontSize=72&fontColor=00FF41&animation=twinkling&fontAlignY=40&desc=President%20%40%20PUCSC%20%7C%20Cyber%20Security%20Enthusiast&descSize=22&descColor=FFFFFF&descAlignY=62" width="100%" alt="header" />
 </p>
 
 <!-- ═══════════════ PROFILE PICTURE (LEFT, CIRCLE) + INTRO (RIGHT) ═══════════════ -->
@@ -141,5 +141,5 @@
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF1744,50:B00020,100:1A0000&height=140&section=footer&text=Thanks%20for%20visiting%20%E2%9D%A4%EF%B8%8F&fontSize=28&fontColor=FFFFFF&animation=twinkling&fontAlignY=70" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=140&section=footer&text=Thanks%20for%20visiting%20%E2%9D%A4%EF%B8%8F&fontSize=28&fontColor=00FF41&animation=twinkling&fontAlignY=70" width="100%" />
 </p>
