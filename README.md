@@ -1,6 +1,6 @@
-<!-- ═══════════════ HEADER ═══════════════ -->
+<!-- ═══════════════ HEADER (galaxy, self-hosted, made by the GitHub Action) ═══════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,24,30&height=300&section=header&text=Fahad%20Al%20Fahim&fontSize=72&fontColor=FF1744&animation=twinkling&fontAlignY=40&desc=President%20%40%20PUCSC%20%7C%20Cyber%20Security%20Enthusiast&descSize=22&descColor=FFFFFF&descAlignY=62" width="100%" alt="header" />
+  <img src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/galaxy-header.svg" width="100%" alt="Fahad Al Fahim" />
 </p>
 
 <!-- ═══════════════ PROFILE PICTURE (LEFT, CIRCLE) + INTRO (RIGHT) ═══════════════ -->
@@ -141,5 +141,5 @@
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=140&section=footer&text=Thanks%20for%20visiting%20%E2%9D%A4%EF%B8%8F&fontSize=28&fontColor=00FF41&animation=twinkling&fontAlignY=70" width="100%" />
+  <img src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/galaxy-footer.svg" width="100%" alt="Thanks for visiting" />
 </p>
