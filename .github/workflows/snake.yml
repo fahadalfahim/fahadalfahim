@@ -24,7 +24,7 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
-      - name: Generate Trophy Room + Contribution Graph SVGs
+      - name: Generate Galaxy Header/Footer, Trophy Room and Contribution Graph
         continue-on-error: true
         env:
           GH_USER: ${{ github.repository_owner }}
@@ -176,6 +176,160 @@ jobs:
           except Exception as e:
               print("graph failed:", e)
           open(f"{OUT}/trophy-room.svg", "w", encoding="utf-8").write(trophy_svg())
+
+          # ---------- 3. galaxy header + footer ----------
+          import random
+
+          FONT = "'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif"
+
+          def _stars(rng, n, W, H, ymax=None):
+              pal = ["#FFFFFF", "#FFE9F0", "#BFD9FF", "#FFD6A5", "#E9D5FF"]
+              out = []
+              for _ in range(n):
+                  x = rng.uniform(0, W); y = rng.uniform(0, ymax or H)
+                  r = rng.choice([0.6, 0.8, 1.0, 1.2, 1.6, 2.0])
+                  d = rng.uniform(1.6, 4.8); dl = rng.uniform(0, 5)
+                  out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{rng.choice(pal)}" class="tw" style="animation-duration:{d:.1f}s;animation-delay:{dl:.1f}s"/>')
+              return "".join(out)
+
+          def _sparkles(items):
+              out = []
+              for i, (x, y, s) in enumerate(items):
+                  out.append(f'<g transform="translate({x},{y})"><path d="M0,-{s} Q0,0 {s},0 Q0,0 0,{s} Q0,0 -{s},0 Q0,0 0,-{s}Z" fill="#fff" class="sp" style="animation-delay:{i*0.8:.1f}s"/></g>')
+              return "".join(out)
+
+          def _shooters(items):
+              out = []
+              for i, (x, y, delay, dur) in enumerate(items):
+                  out.append(f'<g transform="translate({x},{y})"><g class="sh" style="animation-delay:{delay}s;animation-duration:{dur}s"><line x1="0" y1="0" x2="90" y2="-45" stroke="url(#shg)" stroke-width="2.2" stroke-linecap="round"/><circle r="2.4" fill="#fff"/></g></g>')
+              return "".join(out)
+
+          COMMON_CSS = """
+          .tw{animation-name:tw;animation-iteration-count:infinite;animation-timing-function:ease-in-out}
+          .sp{animation:sp 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+          .sh{opacity:0;animation-name:sh;animation-iteration-count:infinite;animation-timing-function:linear}
+          .neb{animation:neb 14s ease-in-out infinite alternate}
+          .neb2{animation:neb 18s ease-in-out infinite alternate-reverse}
+          @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+          @keyframes sp{0%,100%{transform:scale(.3);opacity:.2}50%{transform:scale(1.15);opacity:1}}
+          @keyframes sh{0%{transform:translate(0,0);opacity:0}4%{opacity:1}18%{transform:translate(-380px,190px);opacity:0}100%{transform:translate(-380px,190px);opacity:0}}
+          @keyframes neb{from{transform:translate(-22px,6px)}to{transform:translate(26px,-8px)}}
+          """
+
+          def _galaxy(rng):
+              import math
+              cols = ["#FFFFFF", "#FBCFE8", "#F472B6", "#C4B5FD", "#93C5FD"]
+              out = []
+              for arm in range(2):
+                  for i in range(210):
+                      t = i / 210
+                      r = 7 + 98 * t
+                      th = arm * math.pi + 4.3 * t * math.pi * 0.9
+                      r += rng.gauss(0, 3.5 + 7 * t)
+                      x, y = r * math.cos(th), r * math.sin(th)
+                      sz = rng.choice([0.9, 1.2, 1.6, 2.1]) * (1.25 - t * 0.5)
+                      out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{sz:.1f}" fill="{rng.choice(cols)}" opacity="{0.95 - t * 0.55:.2f}"/>')
+              for _ in range(60):
+                  r = abs(rng.gauss(0, 38)); th = rng.uniform(0, 6.283)
+                  out.append(f'<circle cx="{r*math.cos(th):.1f}" cy="{r*math.sin(th):.1f}" r="{rng.choice([0.8,1.1,1.5])}" fill="#fff" opacity=".7"/>')
+              return "".join(out)
+
+          def header_svg():
+              W, H = 1000, 300
+              rng = random.Random(11)
+              stars = _stars(rng, 190, W, H)
+              sparkles = _sparkles([(150, 55, 9), (870, 70, 11), (520, 38, 7), (330, 262, 8), (690, 255, 9), (60, 240, 7)])
+              shooters = _shooters([(980, 30, 1, 9), (760, 10, 5, 11), (1000, 120, 8.5, 10)])
+              galaxy = _galaxy(random.Random(5))
+              return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">
+          <defs>
+          <radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#1E0B3F"/><stop offset="0.55" stop-color="#0E0524"/><stop offset="1" stop-color="#04020D"/></radialGradient>
+          <linearGradient id="nameg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF1744"/><stop offset="0.5" stop-color="#FF5C8A"/><stop offset="1" stop-color="#FFA07A"/></linearGradient>
+          <linearGradient id="shg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF1744" stop-opacity="0"/><stop offset="0.5" stop-color="#FF8AA8"/><stop offset="1" stop-color="#FF1744" stop-opacity="0"/></linearGradient>
+          <radialGradient id="pl" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#FFB199"/><stop offset="0.45" stop-color="#E0245E"/><stop offset="1" stop-color="#3B0B2E"/></radialGradient>
+          <radialGradient id="core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff"/><stop offset="0.35" stop-color="#FFB3C7"/><stop offset="1" stop-color="#FF1744" stop-opacity="0"/></radialGradient>
+          <linearGradient id="arm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#A78BFA" stop-opacity="0"/><stop offset="0.5" stop-color="#F472B6" stop-opacity="0.9"/><stop offset="1" stop-color="#60A5FA" stop-opacity="0"/></linearGradient>
+          <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="38"/></filter>
+          <filter id="blur2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+          <filter id="glow" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <style>
+          {COMMON_CSS}
+          .name{{font-size:62px;font-weight:800;letter-spacing:2px;animation:pop 1.6s ease-out .3s backwards, pulse 4s ease-in-out 2s infinite}}
+          .sub{{font-size:22px;font-weight:600;letter-spacing:1.6px;fill:#EBDDFF;animation:fadeup 1.6s ease-out 1.2s backwards}}
+          .bar{{transform-box:fill-box;transform-origin:center;animation:grow 1.6s ease-out 1.8s backwards}}
+          .spin{{animation:spin 50s linear infinite}}
+          .float{{animation:float 5s ease-in-out infinite alternate}}
+          @keyframes pop{{from{{opacity:0;transform:translateY(14px)}}to{{opacity:1;transform:translateY(0)}}}}
+          @keyframes pulse{{0%,100%{{opacity:1}}50%{{opacity:.82}}}}
+          @keyframes fadeup{{from{{opacity:0;transform:translateY(10px)}}to{{opacity:1;transform:translateY(0)}}}}
+          @keyframes grow{{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}
+          @keyframes spin{{to{{transform:rotate(360deg)}}}}
+          @keyframes float{{from{{transform:translateY(-7px)}}to{{transform:translateY(7px)}}}}
+          </style>
+          <rect width="{W}" height="{H}" fill="url(#bg)"/>
+          <g filter="url(#blur)">
+          <ellipse class="neb" cx="190" cy="230" rx="270" ry="110" fill="#7C3AED" opacity=".55"/>
+          <ellipse class="neb2" cx="780" cy="80" rx="290" ry="120" fill="#DB2777" opacity=".5"/>
+          <ellipse class="neb" cx="520" cy="170" rx="230" ry="80" fill="#2563EB" opacity=".32"/>
+          <ellipse class="neb2" cx="920" cy="270" rx="190" ry="90" fill="#FF1744" opacity=".35"/>
+          </g>
+          {stars}
+          {sparkles}
+          {shooters}
+          <g transform="translate(125,150)"><ellipse rx="110" ry="46" fill="#A855F7" opacity=".28" filter="url(#blur2)" transform="rotate(-25)"/>
+          <g transform="rotate(-25) scale(1,0.5)"><g class="spin">{galaxy}</g></g>
+          <circle r="20" fill="url(#core)"/></g>
+          <g transform="translate(880,150)"><g class="float">
+          <circle r="46" fill="url(#pl)"/>
+          <ellipse rx="84" ry="19" fill="none" stroke="#FFC2D1" stroke-width="5" opacity=".85" transform="rotate(-22)"/>
+          <g transform="rotate(-22)"><circle r="6" fill="#fff"><animateMotion dur="7s" repeatCount="indefinite" path="M-84,0 A84,19 0 1,1 84,0 A84,19 0 1,1 -84,0"/></circle></g>
+          </g></g>
+          <text x="{W/2}" y="158" text-anchor="middle" class="name" fill="url(#nameg)" stroke="#1A0010" stroke-width="1" paint-order="stroke" filter="url(#glow)">Fahad Al Fahim</text>
+          <text x="{W/2}" y="206" text-anchor="middle" class="sub">President @ PUCSC  |  Cyber Security Enthusiast</text>
+          <rect class="bar" x="330" y="226" width="340" height="2.5" rx="1.2" fill="url(#ln)"/>
+          </svg>'''
+
+          def footer_svg():
+              W, H = 1000, 200
+              rng = random.Random(23)
+              stars = _stars(rng, 110, W, 130)
+              sparkles = _sparkles([(120, 40, 8), (880, 50, 9), (500, 22, 6), (270, 110, 6), (740, 100, 7)])
+              shooters = _shooters([(960, 15, 2, 10), (700, 5, 7, 12)])
+              return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">
+          <defs>
+          <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#04020D"/><stop offset="0.7" stop-color="#14062E"/><stop offset="1" stop-color="#2A0A3E"/></linearGradient>
+          <linearGradient id="shg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED" stop-opacity="0"/><stop offset="0.5" stop-color="#FF4D8D"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
+          <radialGradient id="planet" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#3B1257"/><stop offset="0.5" stop-color="#14062E"/><stop offset="1" stop-color="#05020F"/></radialGradient>
+          <linearGradient id="tg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF6B8A"/><stop offset="0.5" stop-color="#FFA3B8"/><stop offset="1" stop-color="#FFC9AE"/></linearGradient>
+          <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
+          <filter id="glow" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <style>
+          {COMMON_CSS}
+          .t{{font-size:30px;font-weight:700;letter-spacing:1.5px;animation:pulse 3.5s ease-in-out infinite}}
+          .rim{{animation:rim 4s ease-in-out infinite alternate}}
+          @keyframes pulse{{0%,100%{{opacity:1}}50%{{opacity:.78}}}}
+          @keyframes rim{{from{{opacity:.55}}to{{opacity:1}}}}
+          </style>
+          <rect width="{W}" height="{H}" fill="url(#bg)"/>
+          <g filter="url(#blur)">
+          <ellipse class="neb" cx="220" cy="80" rx="240" ry="70" fill="#7C3AED" opacity=".4"/>
+          <ellipse class="neb2" cx="800" cy="70" rx="260" ry="70" fill="#DB2777" opacity=".38"/>
+          </g>
+          {stars}
+          {sparkles}
+          {shooters}
+          <circle cx="500" cy="640" r="500" fill="none" stroke="url(#rim)" stroke-width="10" class="rim" filter="url(#glow)"/>
+          <circle cx="500" cy="640" r="498" fill="url(#planet)"/>
+          <text x="{W/2}" y="102" text-anchor="middle" class="t" fill="url(#tg)" stroke="#12041F" stroke-width="1" paint-order="stroke" filter="url(#glow)">Thanks for visiting <tspan fill="#FF1744" stroke="none">❤</tspan></text>
+          </svg>'''
+
+          open(f"{OUT}/galaxy-header.svg", "w", encoding="utf-8").write(header_svg())
+          open(f"{OUT}/galaxy-footer.svg", "w", encoding="utf-8").write(footer_svg())
+
           print("done")
           PYEOF
 
