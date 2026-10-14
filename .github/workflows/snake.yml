@@ -24,6 +24,161 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
+      - name: Generate Trophy Room + Contribution Graph SVGs
+        continue-on-error: true
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PYEOF'
+          import os, json, urllib.request, datetime
+
+          USER = os.environ.get("GH_USER", "fahadalfahim")
+          TOKEN = os.environ.get("GH_TOKEN", "")
+          OUT = "dist"
+          os.makedirs(OUT, exist_ok=True)
+
+          # ---------- 1. fetch contribution data ----------
+          def fetch_weeks():
+              if os.environ.get("MOCK"):
+                  import random
+                  random.seed(4)
+                  start = datetime.date.today() - datetime.timedelta(days=364)
+                  weeks, d = [], start
+                  for _ in range(53):
+                      days = []
+                      for _ in range(7):
+                          days.append({"date": d.isoformat(), "contributionCount": max(0, int(random.gauss(2, 3)))})
+                          d += datetime.timedelta(days=1)
+                      weeks.append({"contributionDays": days})
+                  return weeks
+              q = """query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{weeks{contributionDays{date contributionCount}}}}}}"""
+              req = urllib.request.Request(
+                  "https://api.github.com/graphql",
+                  data=json.dumps({"query": q, "variables": {"login": USER}}).encode(),
+                  headers={"Authorization": "bearer " + TOKEN, "Content-Type": "application/json", "User-Agent": "profile-readme"},
+              )
+              data = json.load(urllib.request.urlopen(req, timeout=30))
+              return data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+
+          def graph_svg(weeks):
+              W, H = 900, 340
+              L, R, T, B = 60, 870, 90, 270
+              sums = [sum(d["contributionCount"] for d in w["contributionDays"]) for w in weeks]
+              days = [d for w in weeks for d in w["contributionDays"]]
+              total = sum(sums)
+              best_day = max([d["contributionCount"] for d in days] or [0])
+              active = sum(1 for d in days if d["contributionCount"] > 0)
+              avg = total / max(len(weeks), 1)
+              ymax = max(max(sums), 4)
+              step = max(1, -(-ymax // 4))
+              ymax = step * 4
+              n = len(sums)
+              xs = [L + (R - L) * i / max(n - 1, 1) for i in range(n)]
+              ys = [B - (B - T) * v / ymax for v in sums]
+
+              path = f"M{xs[0]:.1f},{ys[0]:.1f}"
+              for i in range(1, n):
+                  mx = (xs[i - 1] + xs[i]) / 2
+                  path += f" C{mx:.1f},{ys[i-1]:.1f} {mx:.1f},{ys[i]:.1f} {xs[i]:.1f},{ys[i]:.1f}"
+              area = path + f" L{xs[-1]:.1f},{B} L{xs[0]:.1f},{B} Z"
+
+              grid = ""
+              for k in range(5):
+                  y = B - (B - T) * k / 4
+                  grid += f'<line x1="{L}" y1="{y:.1f}" x2="{R}" y2="{y:.1f}" stroke="#30363D" stroke-width="1" stroke-dasharray="4 6"/>'
+                  grid += f'<text x="{L-12}" y="{y+4:.1f}" text-anchor="end" class="ax">{step*k}</text>'
+
+              months, last = "", None
+              for i, w in enumerate(weeks):
+                  dt = datetime.date.fromisoformat(w["contributionDays"][0]["date"])
+                  if dt.month != last:
+                      last = dt.month
+                      if i < n - 2:
+                          months += f'<text x="{xs[i]:.1f}" y="{B+22}" text-anchor="middle" class="ax">{dt.strftime("%b")}</text>'
+
+              top = sorted(range(n), key=lambda i: sums[i], reverse=True)[:3]
+              dots = ""
+              for j, i in enumerate(sorted(set(top + [n - 1]))):
+                  if sums[i] == 0:
+                      continue
+                  dots += (f'<circle cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="4" fill="#fff"/>'
+                           f'<circle cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="4" fill="none" stroke="#22D3EE" stroke-width="2" class="pulse" style="animation-delay:{j*0.5}s"/>')
+
+              return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="'Segoe UI',Ubuntu,Arial,sans-serif">
+          <defs>
+          <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0D1117"/><stop offset="1" stop-color="#161B2E"/></linearGradient>
+          <linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22D3EE"/><stop offset="0.5" stop-color="#8B5CF6"/><stop offset="1" stop-color="#EC4899"/></linearGradient>
+          <linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.45"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></linearGradient>
+          </defs>
+          <style>
+          .t{{font-size:22px;font-weight:700;fill:#F0F6FC}}
+          .s{{font-size:14px;fill:#22D3EE;font-weight:600}}
+          .ax{{font-size:12px;fill:#8B949E}}
+          .f{{font-size:14px;fill:#C9D1D9;font-weight:600}}
+          .draw{{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.5s ease-out .3s forwards}}
+          .fade{{opacity:0;animation:fade 1.5s ease-out 2s forwards}}
+          .pulse{{transform-box:fill-box;transform-origin:center;animation:pulse 2s ease-out infinite}}
+          @keyframes draw{{to{{stroke-dashoffset:0}}}}
+          @keyframes fade{{to{{opacity:1}}}}
+          @keyframes pulse{{0%{{transform:scale(1);opacity:.9}}100%{{transform:scale(3.2);opacity:0}}}}
+          </style>
+          <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="url(#bg)" stroke="#30363D"/>
+          <text x="30" y="46" class="t">📈 Contribution Graph</text>
+          <text x="{W-30}" y="46" text-anchor="end" class="s">{total} contributions in the last year</text>
+          {grid}{months}
+          <path d="{area}" fill="url(#ar)" class="fade"/>
+          <path d="{path}" fill="none" stroke="url(#ln)" stroke-width="3.5" stroke-linecap="round" pathLength="1" class="draw"/>
+          <g class="fade">{dots}</g>
+          <text x="{W/2}" y="{H-24}" text-anchor="middle" class="f">🔥 Best day: {best_day}     📅 Active days: {active}     ⚡ Avg / week: {avg:.1f}</text>
+          </svg>'''
+
+          def trophy_svg():
+              items = [
+                  ("👑", "PRESIDENT", "@ PUCSC", "#F59E0B"),
+                  ("🛡️", "CYBER SEC", "Enthusiast", "#22D3EE"),
+                  ("🚩", "CTF", "Player", "#EC4899"),
+                  ("🎓", "CSE", "Final Year", "#8B5CF6"),
+                  ("🕷️", "WEB PENTEST", "Learning", "#3B82F6"),
+                  ("🐍", "PYTHON", "Scripting", "#10B981"),
+                  ("🐧", "LINUX", "Kali &amp; CLI", "#F97316"),
+              ]
+              W, H, cw, gap = 900, 250, 112, 12
+              x0 = (W - (len(items) * cw + (len(items) - 1) * gap)) / 2
+              cards = ""
+              for i, (ic, t, s, c) in enumerate(items):
+                  x = x0 + i * (cw + gap)
+                  cards += f'''<g class="fl" style="animation-delay:{i*0.35}s">
+          <rect x="{x:.1f}" y="30" width="{cw}" height="180" rx="16" fill="#0D1117" stroke="{c}" stroke-width="2" class="glow" style="animation-delay:{i*0.35}s"/>
+          <rect x="{x:.1f}" y="30" width="{cw}" height="180" rx="16" fill="url(#sh{i})"/>
+          <circle cx="{x+cw/2:.1f}" cy="95" r="34" fill="{c}" fill-opacity="0.15" stroke="{c}" stroke-opacity="0.6"/>
+          <text x="{x+cw/2:.1f}" y="108" text-anchor="middle" font-size="38">{ic}</text>
+          <text x="{x+cw/2:.1f}" y="160" text-anchor="middle" class="h" fill="#F0F6FC">{t}</text>
+          <text x="{x+cw/2:.1f}" y="182" text-anchor="middle" class="sub" fill="{c}">{s}</text>
+          </g>'''
+              defs = "".join(f'<linearGradient id="sh{i}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{c}" stop-opacity="0.22"/><stop offset="0.6" stop-color="{c}" stop-opacity="0"/></linearGradient>' for i, (_, _, _, c) in enumerate(items))
+              return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="'Segoe UI',Ubuntu,Arial,sans-serif">
+          <defs>{defs}</defs>
+          <style>
+          .h{{font-size:13px;font-weight:800;letter-spacing:.5px}}
+          .sub{{font-size:12px;font-weight:600}}
+          .fl{{animation:fl 3s ease-in-out infinite alternate}}
+          .glow{{animation:gl 3s ease-in-out infinite alternate}}
+          @keyframes fl{{from{{transform:translateY(0)}}to{{transform:translateY(-9px)}}}}
+          @keyframes gl{{from{{stroke-opacity:.35}}to{{stroke-opacity:1}}}}
+          </style>
+          {cards}
+          </svg>'''
+
+          try:
+              weeks = fetch_weeks()
+              open(f"{OUT}/contribution-graph.svg", "w", encoding="utf-8").write(graph_svg(weeks))
+          except Exception as e:
+              print("graph failed:", e)
+          open(f"{OUT}/trophy-room.svg", "w", encoding="utf-8").write(trophy_svg())
+          print("done")
+          PYEOF
+
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
