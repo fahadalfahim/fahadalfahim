@@ -1,6 +1,6 @@
 <!-- ═══════════════ HEADER ═══════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,24,30&height=300&section=header&text=Fahad%20Al%20Fahim&fontSize=72&fontColor=00FF41&animation=twinkling&fontAlignY=40&desc=President%20%40%20PUCSC%20%7C%20Cyber%20Security%20Enthusiast&descSize=22&descColor=FFFFFF&descAlignY=62" width="100%" alt="header" />
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,24,30&height=300&section=header&text=Fahad%20Al%20Fahim&fontSize=72&fontColor=FF1744&animation=twinkling&fontAlignY=40&desc=President%20%40%20PUCSC%20%7C%20Cyber%20Security%20Enthusiast&descSize=22&descColor=FFFFFF&descAlignY=62" width="100%" alt="header" />
 </p>
 
 <!-- ═══════════════ PROFILE PICTURE (LEFT, CIRCLE) + INTRO (RIGHT) ═══════════════ -->
