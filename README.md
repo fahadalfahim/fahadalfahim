@@ -1,6 +1,6 @@
-<!-- ═══════════════ HEADER (galaxy, self-hosted, made by the GitHub Action) ═══════════════ -->
+<!-- ═══════════════ HEADER (hacker terminal, self-hosted, made by the GitHub Action) ═══════════════ -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/galaxy-header.svg" width="100%" alt="Fahad Al Fahim" />
+  <img src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/hacker-header.svg" width="100%" alt="Fahad Al Fahim" />
 </p>
 
 <!-- ═══════════════ PROFILE PICTURE (LEFT, CIRCLE) + INTRO (RIGHT) ═══════════════ -->
@@ -139,7 +139,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&italic=true&size=18&duration=4000&pause=1500&color=FF1744&center=true&vCenter=true&width=700&lines=%22The+only+truly+secure+system+is+one+that+is+powered+off.%22;%22Hack+the+planet%2C+ethically.%22;%22Learn+the+attack.+Build+the+defense.%22" alt="Quote" />
 </p>
 
-<!-- ═══════════════ FOOTER (galaxy, self-hosted, made by the GitHub Action) ═══════════════ -->
+<!-- ═══════════════ FOOTER (hacker terminal, self-hosted, made by the GitHub Action) ═══════════════ -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/galaxy-footer.svg" width="100%" alt="Thanks for visiting" />
+  <img src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/hacker-footer.svg" width="100%" alt="Thanks for visiting" />
 </p>
