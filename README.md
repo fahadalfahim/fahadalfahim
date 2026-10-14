@@ -10,7 +10,7 @@
 </p>
 <!-- Profile Views Counter -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=TOMAR_USERNAME&label=Profile+Views&color=8A2BE2&style=for-the-badge" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=fahadalfahim&label=Profile+Views&color=8A2BE2&style=for-the-badge" alt="Profile Views" />
 </p>
 
 <!-- Colorful Rainbow Divider -->
