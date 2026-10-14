@@ -1,146 +1,145 @@
-<!-- ╔══════════════════════════════════════════════════════════════════════╗
-     ║  FAHAD AL FAHIM • GITHUB PROFILE README                            ║
-     ║  Theme: Neon Cyberpunk / Cybersecurity / Developer                 ║
-     ╚══════════════════════════════════════════════════════════════════════╝ -->
+<!-- ═══════════════ HEADER ═══════════════ -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,24,30&height=300&section=header&text=Fahad%20Al%20Fahim&fontSize=72&fontColor=00FF41&animation=twinkling&fontAlignY=40&desc=President%20%40%20PUCSC%20%7C%20Cyber%20Security%20Enthusiast&descSize=22&descColor=FFFFFF&descAlignY=62" width="100%" alt="header" />
+</p>
 
-<div align="center">
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:080B16,45:171A3B,100:00E5FF&height=250&section=header&text=FAHAD%20AL%20FAHIM&fontSize=52&fontColor=F7FAFF&fontAlignY=36&desc=CYBERSECURITY%20%7C%20CSE%20%7C%20BUILDER&descSize=17&descAlignY=58&animation=fadeIn" alt="Fahad Al Fahim — Cybersecurity, CSE, Builder" />
-
+<!-- ═══════════════ PROFILE PICTURE (LEFT, CIRCLE) + INTRO (RIGHT) ═══════════════ -->
 <a href="https://github.com/fahadalfahim">
-  <img src="https://avatars.githubusercontent.com/fahadalfahim" width="132" alt="Fahad Al Fahim's GitHub avatar" />
+  <img align="left" src="https://images.weserv.nl/?url=avatars.githubusercontent.com/fahadalfahim&w=240&h=240&fit=cover&mask=circle&maxage=1d" width="190" alt="Fahad's Profile Picture" />
 </a>
 
-<br />
+<!-- ═══════════════ TYPING ANIMATION ═══════════════ -->
+<p align="center">
+  <a href="https://github.com/fahadalfahim">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=800&color=16A34A&center=true&vCenter=true&multiline=false&width=600&height=60&lines=%24+whoami+%E2%86%92+Fahad+Al+Fahim;%F0%9F%9B%A1%EF%B8%8F+Cyber+Security+%7C+Ethical+Hacking;%F0%9F%94%90+CTF+Player+%26+Web+Pentester;%F0%9F%91%91+President+%40+Presidency+University+Cyber+Club;%F0%9F%9A%80+Always+Learning%2C+Always+Hacking" alt="Typing SVG" />
+  </a>
+</p>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2600&pause=700&color=00E5FF&center=true&vCenter=true&width=800&lines=Cybersecurity+Enthusiast+%F0%9F%9B%A1%EF%B8%8F;CSE+Student+%40+Presidency+University;President+%40+PUCSC;Learn+%E2%80%A2+Build+%E2%80%A2+Secure" alt="Animated introduction" />
+<!-- ═══════════════ BADGES ═══════════════ -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Hacking%20the%20Planet-008A52?style=for-the-badge&logo=hackthebox&logoColor=white&labelColor=0D1117" />
+  <img src="https://img.shields.io/badge/Role-President%20PUCSC-8A2BE2?style=for-the-badge&logo=gnometerminal&logoColor=white&labelColor=0D1117" />
+  <img src="https://img.shields.io/badge/CSE-Final%20Year-FF0080?style=for-the-badge&logo=graduation-cap&logoColor=white&labelColor=0D1117" />
+</p>
 
-<br />
+<p align="center">
+  <img src="https://hits.sh/github.com/fahadalfahim.svg?style=for-the-badge&label=Profile%20Views&color=8A2BE2&labelColor=0D1117" alt="Profile Views" />
+  <a href="https://github.com/fahadalfahim?tab=followers">
+    <img src="https://img.shields.io/github/followers/fahadalfahim?style=for-the-badge&logo=github&color=008A52&labelColor=0D1117" alt="Followers" />
+  </a>
+  <a href="https://github.com/fahadalfahim?tab=repositories">
+    <img src="https://img.shields.io/github/stars/fahadalfahim?style=for-the-badge&logo=starship&color=FFD700&labelColor=0D1117" alt="Stars" />
+  </a>
+</p>
 
-<a href="https://github.com/fahadalfahim"><img src="https://img.shields.io/badge/GitHub-fahadalfahim-0D1117?style=for-the-badge&logo=github&logoColor=00E5FF" alt="GitHub profile" /></a>
-<a href="mailto:fahadalfahim.info@gmail.com"><img src="https://img.shields.io/badge/Email-Let's%20connect-0D1117?style=for-the-badge&logo=gmail&logoColor=FF6B8A" alt="Email Fahad" /></a>
-<img src="https://komarev.com/ghpvc/?username=fahadalfahim&label=PROFILE+SCANS&color=7C3AED&style=for-the-badge" alt="Profile views" />
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
 
-</div>
+<!-- ═══════════════ ABOUT (ANIMATED) ═══════════════ -->
+## 💻 `~/about-me`
 
----
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,24&height=44&section=header&text=fahad%40pucsc%3A%20~%2Fabout-me&fontSize=16&fontColor=22D3EE&fontAlign=14&fontAlignY=55&animation=fadeIn" width="720" alt="terminal title" />
+  <br/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=17&duration=2200&pause=900&color=22D3EE&background=0D1117&multiline=true&repeat=true&center=false&vCenter=false&width=720&height=300&lines=%C2%A0%C2%A0%24+cat+profile.txt;%C2%A0%C2%A0%F0%9F%91%A4+Fahad+Al+Fahim;%C2%A0%C2%A0%F0%9F%8E%93+Final-year+CSE+%40+Presidency+University;%C2%A0%C2%A0%F0%9F%91%91+President%2C+Cyber+Security+Club+%28PUCSC%29;%C2%A0%C2%A0%F0%9F%9B%A1%EF%B8%8F+Cyber+Security+%E2%80%A2+Ethical+Hacking+%E2%80%A2+CTFs;%C2%A0%C2%A0%F0%9F%93%9A+Learning%3A+Advanced+Web+Pentesting+%26+Next.js;%C2%A0%C2%A0%F0%9F%92%AC+Python+%E2%80%A2+Linux+%E2%80%A2+Web+Vulnerabilities;%C2%A0%C2%A0%F0%9F%93%AB+fahadalfahim.info%40gmail.com" width="720" alt="About me terminal" />
+</p>
 
-## `01 / WHOAMI` 👨‍💻
+<p align="center">
+  <img src="https://img.shields.io/badge/%F0%9F%8E%93%20EDUCATION-Final--year%20CSE%20%40%20Presidency%20University-7C3AED?style=for-the-badge&labelColor=0D1117" />
+  <br/>
+  <img src="https://img.shields.io/badge/%F0%9F%91%91%20LEADERSHIP-President%20%7C%20Cyber%20Security%20Club%20(PUCSC)-DB2777?style=for-the-badge&labelColor=0D1117" />
+  <br/>
+  <img src="https://img.shields.io/badge/%F0%9F%9B%A1%EF%B8%8F%20FOCUS-Cyber%20Security%20%7C%20Ethical%20Hacking%20%7C%20Network%20Security%20%7C%20CTFs-2563EB?style=for-the-badge&labelColor=0D1117" />
+  <br/>
+  <img src="https://img.shields.io/badge/%F0%9F%93%9A%20LEARNING-Advanced%20Web%20Pentesting%20%26%20Next.js-EA580C?style=for-the-badge&labelColor=0D1117" />
+  <br/>
+  <img src="https://img.shields.io/badge/%F0%9F%92%AC%20ASK%20ME%20ABOUT-Python%20%7C%20Linux%20%7C%20Web%20Vulnerabilities-0D9488?style=for-the-badge&labelColor=0D1117" />
+  <br/>
+  <img src="https://img.shields.io/badge/%F0%9F%93%AB%20REACH%20ME-fahadalfahim.info%40gmail.com-008A52?style=for-the-badge&labelColor=0D1117" />
+</p>
 
-```text
-┌──[ FAHAD@CYBER-LAB ]────────────────────────────────────┐
-│  ID          Fahad Al Fahim                             │
-│  ROLE        CSE Student · PUCSC President               │
-│  INTERESTS   Cybersecurity · Ethical Hacking · CTFs      │
-│  EXPLORING   Advanced Web Pentesting · Next.js           │
-│  PRINCIPLE   Learn continuously. Build thoughtfully.     │
-│              Secure what matters.                        │
-└──────────────────────────────────────────────────────────┘
-```
+<!-- ═══════════════ CONNECT ═══════════════ -->
+## 🌐 `Connect With Me`
 
-I'm a Computer Science and Engineering student at **Presidency University** with a strong interest in cybersecurity, ethical hacking, network security, and software development. I also serve as the **President of the Presidency University Cyber Security Club (PUCSC)**, where I'm interested in helping build a curious, collaborative, and security-aware community.
+<p align="center">
+  <a href="https://www.linkedin.com/in/fahadalfahim-info" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="mailto:fahadalfahim.info@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+  <a href="https://github.com/fahadalfahim">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</p>
 
-I enjoy exploring how technology works, learning by building, and developing my skills one project at a time.
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
 
-- 🎓 **Education:** Computer Science & Engineering — Presidency University
-- 🛡️ **Cybersecurity:** Ethical hacking, network security, security awareness, and CTFs
-- 🚀 **Currently exploring:** Advanced web penetration testing and Next.js
-- 💬 **Topics I enjoy:** Python, Linux, and web vulnerabilities
-- 📫 **Contact:** [fahadalfahim.info@gmail.com](mailto:fahadalfahim.info@gmail.com)
+<!-- ═══════════════ TECH ARSENAL ═══════════════ -->
+## 🚀 `My Tech Arsenal`
 
----
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=py,js,html,css,nextjs,mysql,kali,linux,git,github,vscode,bash,md&perline=7&theme=dark" />
+  </a>
+</p>
 
-## `02 / TECH ARSENAL` ⚡
+<p align="center">
+  <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Burp_Suite-FF6633?style=flat-square&logo=burpsuite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white" />
+  <img src="https://img.shields.io/badge/Nmap-4682B4?style=flat-square&logo=nmap&logoColor=white" />
+  <img src="https://img.shields.io/badge/Metasploit-2596CD?style=flat-square&logo=metasploit&logoColor=white" />
+  <img src="https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hack_The_Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black" />
+  <img src="https://img.shields.io/badge/TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white" />
+</p>
 
-<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
 
-<img src="https://skillicons.dev/icons?i=py,js,html,css,nextjs,mysql,kali,linux,git,github,vscode,bash,md&perline=7&theme=dark" alt="Technology icons: Python, JavaScript, HTML, CSS, Next.js, MySQL, Kali Linux, Linux, Git, GitHub, VS Code, Bash and Markdown" />
+<!-- ═══════════════ STATS ═══════════════ -->
+## 📊 `GitHub Stats`
 
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=fahadalfahim&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00FF41&icon_color=8A2BE2&include_all_commits=true&count_private=true" width="49%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fahadalfahim&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=00FF41&langs_count=8" width="49%" />
+</p>
 
-<details>
-<summary><b>🔎 Explore my areas of interest</b></summary>
-<br />
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=fahadalfahim&theme=radical&hide_border=true&background=0D1117&ring=00FF41&fire=FF0080&currStreakLabel=00FF41" width="70%" />
+</p>
 
-| Area | Current focus |
-|:--|:--|
-| **Programming** | Python, JavaScript |
-| **Web** | HTML, CSS, Next.js |
-| **Cybersecurity** | Ethical hacking, web security, network security, CTF learning |
-| **Environment & tools** | Linux, Kali Linux, Bash, Git, GitHub, VS Code |
-| **Data** | MySQL |
+<!-- ═══════════════ TROPHIES (self-hosted, made by the GitHub Action) ═══════════════ -->
+## 🏆 `Trophy Room`
 
-<sub>These are the technologies and learning areas represented in my current profile. My stack will evolve as I build and learn more.</sub>
-</details>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/trophy-room.svg" width="100%" alt="Trophy Room" />
+</p>
 
----
+<!-- ═══════════════ ACTIVITY GRAPH (self-hosted, made by the GitHub Action) ═══════════════ -->
+## 📈 `Contribution Graph`
 
-## `03 / GITHUB TELEMETRY` 📡
+<p align="center">
+  <img src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/contribution-graph.svg" width="100%" alt="Contribution Graph" />
+</p>
 
-<div align="center">
+<!-- ═══════════════ SNAKE ═══════════════ -->
+<!-- Needs the GitHub Action in .github/workflows/snake.yml (file provided separately) -->
+## 🐍 `Snake Eating My Contributions`
 
-<a href="https://github.com/fahadalfahim">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=fahadalfahim&show_icons=true&include_all_commits=true&hide_border=true&rank_icon=github&bg_color=0D1117&title_color=00E5FF&text_color=D7E0F0&icon_color=BD93F9" alt="Fahad's GitHub statistics" />
-</a>
-<a href="https://github.com/fahadalfahim">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fahadalfahim&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=00E5FF&text_color=D7E0F0" alt="Most used programming languages" />
-</a>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/github-snake.svg" />
+    <img alt="Snake animation" src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/github-snake-dark.svg" />
+  </picture>
+</p>
 
-<br />
+<!-- ═══════════════ QUOTE ═══════════════ -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&italic=true&size=18&duration=4000&pause=1500&color=8A2BE2&center=true&vCenter=true&width=700&lines=%22The+only+truly+secure+system+is+one+that+is+powered+off.%22;%22Hack+the+planet%2C+ethically.%22;%22Learn+the+attack.+Build+the+defense.%22" alt="Quote" />
+</p>
 
-<img width="70%" src="https://streak-stats.demolab.com?user=fahadalfahim&hide_border=true&background=0D1117&ring=00E5FF&fire=FF6B8A&currStreakLabel=BD93F9&sideLabels=D7E0F0&dates=8B95A7&currStreakNum=FFFFFF&sideNums=FFFFFF" alt="GitHub contribution streak" />
-
-<br />
-
-<img width="90%" src="https://github-profile-trophy.vercel.app/?username=fahadalfahim&theme=darkhub&no-frame=true&no-bg=true&row=1&column=6" alt="GitHub profile trophies" />
-
-</div>
-
-<sub>Stats and language cards are generated by third-party services. Availability and displayed numbers depend on those services and GitHub's public profile data.</sub>
-
----
-
-## `04 / CONTRIBUTION MATRIX` 🐍
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/github-snake.svg" />
-  <img alt="Animated snake moving through Fahad's GitHub contribution graph" src="https://raw.githubusercontent.com/fahadalfahim/fahadalfahim/output/github-snake.svg" width="100%" />
-</picture>
-
-</div>
-
-<sub>The contribution animation appears after the included GitHub Actions workflow has run successfully for the first time.</sub>
-
----
-
-## `05 / BUILD • LEARN • REPEAT` 🧪
-
-I use GitHub to document my learning, experiment with ideas, and share projects as they develop. I'm especially interested in work that connects **software development with practical cybersecurity**.
-
-<div align="center">
-
-<a href="https://github.com/fahadalfahim?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE-ALL%20REPOSITORIES-00E5FF?style=for-the-badge&logo=github&logoColor=0D1117" alt="Explore all repositories" /></a>
-<a href="https://github.com/fahadalfahim?tab=stars"><img src="https://img.shields.io/badge/DISCOVER-STARRED%20PROJECTS-BD93F9?style=for-the-badge&logo=github&logoColor=0D1117" alt="Discover starred projects" /></a>
-
-</div>
-
----
-
-## `06 / CONNECT` 🌐
-
-<div align="center">
-
-<a href="https://github.com/fahadalfahim"><img src="https://img.shields.io/badge/GitHub-Follow%20my%20work-111827?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub" /></a>
-<a href="mailto:fahadalfahim.info@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hello-111827?style=for-the-badge&logo=gmail&logoColor=FF6B8A" alt="Email" /></a>
-
-<br /><br />
-
-**Curiosity is the exploit. Knowledge is the patch. Keep learning.**
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00E5FF,55:7C3AED,100:080B16&height=120&section=footer" alt="Neon gradient footer" />
-
-</div>
-
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=140&section=footer&text=Thanks%20for%20visiting%20%E2%9D%A4%EF%B8%8F&fontSize=28&fontColor=00FF41&animation=twinkling&fontAlignY=70" width="100%" />
+</p>
