@@ -1,72 +1,77 @@
-<!-- Hacker Header / Matrix Banner GIF -->
+<!-- Animated Wave Banner with your Name -->
 <p align="center">
-  <img src="https://i.pinimg.com/originals/a0/0b/c4/a00bc4d4e33dbb277b2f4c39f04ee836.gif" width="100%" height="200" style="object-fit: cover; border-radius: 10px;" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Fahad%20Al%20Fahim&fontSize=60&animation=fadeIn&fontAlignY=38&desc=President%20%40%20PUCSC%20%7C%20Cyber%20Security%20Enthusiast&descAlignY=55&descAlign=62" width="100%" />
 </p>
 
-<!-- Your Profile Picture & Terminal Style Typing Animation -->
+<!-- Your Profile Picture & Animated Typing Effect -->
 <p align="center">
   <a href="https://github.com/TOMAR_USERNAME">
-    <!-- Ei link ta direct tomar chobi pull korbe (TOMAR_USERNAME thik vabe dibe) -->
-    <img src="https://avatars.githubusercontent.com/TOMAR_USERNAME" width="160" style="border-radius:50%" alt="Fahad's Profile Picture">
+    <!-- Nicher link-ta automatically tomar GitHub-er chobi niye nibe -->
+    <img src="https://github.com/TOMAR_USERNAME.png" width="160" alt="Fahad's Profile Picture">
   </a>
-  <br><br>
-  <!-- Terminal Typing Effect -->
-  <img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&weight=800&size=30&pause=1000&color=00FF41&center=true&vCenter=true&width=800&lines=root%40Fahad-Terminal:~%23+whoami;Fahad+Al+Fahim;President+%40+PUCSC;Cyber+Security+Enthusiast+🛡%EF%B8%8F;System+Access+Granted...+%E2%9C%94%EF%B8%8F" alt="Typing SVG" />
+  <br>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=24&pause=1000&color=FF3366&center=true&vCenter=true&width=600&lines=Welcome+to+my+Creative+Space+✨;Penetration+Tester+in+Making+🛡️;Building+Python+Automations+🐍;Always+Learning+New+Tech+🚀" alt="Typing SVG" />
 </p>
 
-<!-- Hacker Style Views Counter (Neon Green & Black) -->
+<!-- Profile Views Counter -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=TOMAR_USERNAME&label=SYSTEM+VIEWS&color=00FF41&labelColor=000000&style=for-the-badge" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=TOMAR_USERNAME&label=Profile+Views&color=8A2BE2&style=for-the-badge" alt="Profile Views" />
 </p>
 
-<!-- Tech Green Laser Line Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+<!-- Colorful Rainbow Divider -->
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" />
 
-### 👤 **System Info // About Me**
+### 💫 **About Me**
 <p align="center">
-  <!-- Hacker Terminal GIF -->
-  <img align="right" src="https://media.giphy.com/media/26tn33aiTi1jIGsM0/giphy.gif" width="280" />
+  <!-- Animated Coder GIF -->
+  <img align="right" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" width="300" />
 </p>
 
-* 💻 **User:** Final-year CSE student at **Presidency University**.
-* 👑 **Privilege Level:** President of **Presidency University Cyber Security Club (PUCSC)**.
-* 🛡️ **Target:** Penetration Testing, Ethical Hacking, Network Security & CTFs.
-* ⚙️ **Current Process:** Building Python Automations & Web Pentesting.
-* 📡 **Ping Me:** *[Tomar Email Ekhane Dibe]*
+* 🎓 **Education:** Final-year CSE student at **Presidency University**.
+* 👑 **Leadership:** Proud President of **Presidency University Cyber Security Club (PUCSC)**.
+* 🛡️ **Focus:** Cyber Security, Ethical Hacking, Network Security & CTFs.
+* 💻 **Currently Learning:** Advanced Web Pentesting & Next.js.
+* 💬 **Ask me about:** Python, Linux, Web Vulnerabilities.
+* 📫 **Reach me at:** *[Tomar Email Ekhane Dibe]*
 
 <br>
 
-<!-- Social Links (Hacker Green Style) -->
+<!-- Social Media Connections -->
 <p align="left">
   <a href="https://linkedin.com/in/TOMAR_LINKEDIN_USERNAME" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=00FF41" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="mailto:TOMAR_EMAIL_ADDRESS_EKHANE_DIBE">
-    <img src="https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=gmail&logoColor=00FF41" alt="Email"/>
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
   </a>
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" />
 
-### 🛠️ **Payloads & Tools**
+### 🚀 **My Tech Arsenal**
 <p align="center">
   <a href="https://skillicons.dev">
-    <!-- Kali Linux, Bash o baki tools er icon -->
-    <img src="https://skillicons.dev/icons?i=kali,linux,bash,py,js,html,css,nextjs,mysql,git,github,vscode&perline=6" />
+    <!-- Ekhane technology-er icon gulo add kora ache -->
+    <img src="https://skillicons.dev/icons?i=py,js,html,css,nextjs,mysql,kali,linux,git,github,vscode,bash,md&perline=8" />
   </a>
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" />
 
-### 🏆 **System Achievements & Stats**
+### 🏆 **GitHub Trophies & Stats**
 
-<!-- Dark Theme Trophies -->
+<!-- Golden Trophies -->
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=TOMAR_USERNAME&theme=matrix&row=1&column=5&margin-w=15&margin-h=15" width="100%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=TOMAR_USERNAME&theme=radical&row=1&column=5&margin-w=15&margin-h=15" width="100%" />
 </p>
 
-<!-- Hacker Theme Stats (Black Background, Neon Green Text/Icons) -->
+<!-- Animated Colorful Stats -->
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=TOMAR_USERNAME&show_icons=true&bg_color=000000&title_color=00FF41&text_color=00FF41&icon_color=00FF41&border_color=00FF41&hide_border=true" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=TOMAR_USERNAME&background=000000&stroke=00FF41&ring=00FF41&fire=00FF41&currStreakNum=00FF41&sideNums=00FF41&currStreakLabel=00FF41&sideLabels=00FF41&dates=00FF41&hide_border=true" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=TOMAR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=TOMAR_USERNAME&theme=tokyonight&hide_border=true&background=0D1117" width="48%" />
+</p>
+
+<!-- Animated Wave Footer -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=100&section=footer" width="100%" />
 </p>
