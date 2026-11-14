@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="250" viewBox="0 0 900 250" font-family="'Segoe UI',Ubuntu,Arial,sans-serif">
+<defs><linearGradient id="sh0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF1744" stop-opacity="0.22"/><stop offset="0.6" stop-color="#FF1744" stop-opacity="0"/></linearGradient><linearGradient id="sh1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#39FF14" stop-opacity="0.22"/><stop offset="0.6" stop-color="#39FF14" stop-opacity="0"/></linearGradient><linearGradient id="sh2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF1744" stop-opacity="0.22"/><stop offset="0.6" stop-color="#FF1744" stop-opacity="0"/></linearGradient><linearGradient id="sh3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#39FF14" stop-opacity="0.22"/><stop offset="0.6" stop-color="#39FF14" stop-opacity="0"/></linearGradient><linearGradient id="sh4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF1744" stop-opacity="0.22"/><stop offset="0.6" stop-color="#FF1744" stop-opacity="0"/></linearGradient><linearGradient id="sh5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#39FF14" stop-opacity="0.22"/><stop offset="0.6" stop-color="#39FF14" stop-opacity="0"/></linearGradient><linearGradient id="sh6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF1744" stop-opacity="0.22"/><stop offset="0.6" stop-color="#FF1744" stop-opacity="0"/></linearGradient></defs>
+<style>
+.h{font-size:13px;font-weight:800;letter-spacing:.5px}
+.sub{font-size:12px;font-weight:600}
+.fl{animation:fl 3s ease-in-out infinite alternate}
+.glow{animation:gl 3s ease-in-out infinite alternate}
+@keyframes fl{from{transform:translateY(0)}to{transform:translateY(-9px)}}
+@keyframes gl{from{stroke-opacity:.35}to{stroke-opacity:1}}
+</style>
+<g class="fl" style="animation-delay:0.0s">
+<rect x="22.0" y="30" width="112" height="180" rx="16" fill="#0D1117" stroke="#FF1744" stroke-width="2" class="glow" style="animation-delay:0.0s"/>
+<rect x="22.0" y="30" width="112" height="180" rx="16" fill="url(#sh0)"/>
+<circle cx="78.0" cy="95" r="34" fill="#FF1744" fill-opacity="0.15" stroke="#FF1744" stroke-opacity="0.6"/>
+<text x="78.0" y="108" text-anchor="middle" font-size="38">👑</text>
+<text x="78.0" y="160" text-anchor="middle" class="h" fill="#F0F6FC">PRESIDENT</text>
+<text x="78.0" y="182" text-anchor="middle" class="sub" fill="#FF1744">@ PUCSC</text>
+</g><g class="fl" style="animation-delay:0.35s">
+<rect x="146.0" y="30" width="112" height="180" rx="16" fill="#0D1117" stroke="#39FF14" stroke-width="2" class="glow" style="animation-delay:0.35s"/>
+<rect x="146.0" y="30" width="112" height="180" rx="16" fill="url(#sh1)"/>
+<circle cx="202.0" cy="95" r="34" fill="#39FF14" fill-opacity="0.15" stroke="#39FF14" stroke-opacity="0.6"/>
+<text x="202.0" y="108" text-anchor="middle" font-size="38">🛡️</text>
+<text x="202.0" y="160" text-anchor="middle" class="h" fill="#F0F6FC">CYBER SEC</text>
+<text x="202.0" y="182" text-anchor="middle" class="sub" fill="#39FF14">Enthusiast</text>
+</g><g class="fl" style="animation-delay:0.7s">
+<rect x="270.0" y="30" width="112" height="180" rx="16" fill="#0D1117" stroke="#FF1744" stroke-width="2" class="glow" style="animation-delay:0.7s"/>
+<rect x="270.0" y="30" width="112" height="180" rx="16" fill="url(#sh2)"/>
+<circle cx="326.0" cy="95" r="34" fill="#FF1744" fill-opacity="0.15" stroke="#FF1744" stroke-opacity="0.6"/>
+<text x="326.0" y="108" text-anchor="middle" font-size="38">🚩</text>
+<text x="326.0" y="160" text-anchor="middle" class="h" fill="#F0F6FC">CTF</text>
+<text x="326.0" y="182" text-anchor="middle" class="sub" fill="#FF1744">Player</text>
+</g><g class="fl" style="animation-delay:1.0499999999999998s">
+<rect x="394.0" y="30" width="112" height="180" rx="16" fill="#0D1117" stroke="#39FF14" stroke-width="2" class="glow" style="animation-delay:1.0499999999999998s"/>
+<rect x="394.0" y="30" width="112" height="180" rx="16" fill="url(#sh3)"/>
+<circle cx="450.0" cy="95" r="34" fill="#39FF14" fill-opacity="0.15" stroke="#39FF14" stroke-opacity="0.6"/>
+<text x="450.0" y="108" text-anchor="middle" font-size="38">🎓</text>
+<text x="450.0" y="160" text-anchor="middle" class="h" fill="#F0F6FC">CSE</text>
+<text x="450.0" y="182" text-anchor="middle" class="sub" fill="#39FF14">Final Year</text>
+</g><g class="fl" style="animation-delay:1.4s">
+<rect x="518.0" y="30" width="112" height="180" rx="16" fill="#0D1117" stroke="#FF1744" stroke-width="2" class="glow" style="animation-delay:1.4s"/>
+<rect x="518.0" y="30" width="112" height="180" rx="16" fill="url(#sh4)"/>
+<circle cx="574.0" cy="95" r="34" fill="#FF1744" fill-opacity="0.15" stroke="#FF1744" stroke-opacity="0.6"/>
+<text x="574.0" y="108" text-anchor="middle" font-size="38">🕷️</text>
+<text x="574.0" y="160" text-anchor="middle" class="h" fill="#F0F6FC">WEB PENTEST</text>
+<text x="574.0" y="182" text-anchor="middle" class="sub" fill="#FF1744">Learning</text>
+</g><g class="fl" style="animation-delay:1.75s">
+<rect x="642.0" y="30" width="112" height="180" rx="16" fill="#0D1117" stroke="#39FF14" stroke-width="2" class="glow" style="animation-delay:1.75s"/>
+<rect x="642.0" y="30" width="112" height="180" rx="16" fill="url(#sh5)"/>
+<circle cx="698.0" cy="95" r="34" fill="#39FF14" fill-opacity="0.15" stroke="#39FF14" stroke-opacity="0.6"/>
+<text x="698.0" y="108" text-anchor="middle" font-size="38">🐍</text>
+<text x="698.0" y="160" text-anchor="middle" class="h" fill="#F0F6FC">PYTHON</text>
+<text x="698.0" y="182" text-anchor="middle" class="sub" fill="#39FF14">Scripting</text>
+</g><g class="fl" style="animation-delay:2.0999999999999996s">
+<rect x="766.0" y="30" width="112" height="180" rx="16" fill="#0D1117" stroke="#FF1744" stroke-width="2" class="glow" style="animation-delay:2.0999999999999996s"/>
+<rect x="766.0" y="30" width="112" height="180" rx="16" fill="url(#sh6)"/>
+<circle cx="822.0" cy="95" r="34" fill="#FF1744" fill-opacity="0.15" stroke="#FF1744" stroke-opacity="0.6"/>
+<text x="822.0" y="108" text-anchor="middle" font-size="38">🐧</text>
+<text x="822.0" y="160" text-anchor="middle" class="h" fill="#F0F6FC">LINUX</text>
+<text x="822.0" y="182" text-anchor="middle" class="sub" fill="#FF1744">Kali &amp; CLI</text>
+</g>
+</svg>
